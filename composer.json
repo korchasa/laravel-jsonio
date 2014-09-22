@@ -1,0 +1,21 @@
+{
+    "name": "korchasa/laravel-jsonio",
+    "description": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "korchasa",
+            "email": "korchasa@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "classmap": [
+        ],
+        "psr-0": { "Jsonio\\": "src/" }
+    },
+    "minimum-stability": "dev"
+}
