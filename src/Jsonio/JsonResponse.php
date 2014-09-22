@@ -2,6 +2,7 @@
 namespace Jsonio;
 use Illuminate\Database\Eloquent\Collection;
 use \Illuminate\Pagination\Paginator;
+use Symfony\Component\HttpFoundation\Response;
 
 class JsonResponse extends \Illuminate\Support\Facades\Response
 {
@@ -106,5 +107,11 @@ class JsonResponse extends \Illuminate\Support\Facades\Response
 			'next_url' => $next_page_url
 		];
 		return parent::json($response, 200, [], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+	}
+
+	static function getStandardStatusText($code)
+	{
+		if(isset(Response::$statusTexts[$code]))
+			return Response::$statusTexts[$code];
 	}
 }
