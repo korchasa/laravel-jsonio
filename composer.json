@@ -14,8 +14,11 @@
     },
     "autoload": {
         "classmap": [
+           "tests/Jsonio/"
         ],
-        "psr-0": { "Jsonio\\": "src/" }
+        "psr-0": {
+            "Jsonio\\": "src/"
+        }
     },
     "minimum-stability": "dev"
 }
